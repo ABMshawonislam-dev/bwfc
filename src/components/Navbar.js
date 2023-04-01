@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { FaAngleDown } from "react-icons/fa"
+import Container from './layouts/Container'
+
 
 const Navbar = () => {
 
@@ -10,7 +12,6 @@ const Navbar = () => {
     useEffect(()=>{
         async function nav(){
             let navbar = await axios.get("https://bwfc-api.vercel.app/navbar")
-            console.log(navbar.data.navItems)
             setNavbarData(navbar.data)
             setLoading(false)
         }
@@ -25,7 +26,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='max-w-container mx-auto mt-7'>
+      <Container>
         <div className='flex justify-between items-center'>
             <div className='w-[10%]'>
             <img src={navbarData.logo}/>
@@ -71,7 +72,7 @@ const Navbar = () => {
             
             </div>
         </div>
-    </div>
+    </Container>
   )
 }
 
