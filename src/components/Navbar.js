@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import {FaAngleDown} from "react-icons/fa"
+import { FaAngleDown } from "react-icons/fa"
 
 const Navbar = () => {
 
@@ -41,7 +41,7 @@ const Navbar = () => {
                                     <FaAngleDown/>
                                     <ul>
                                     {nitem.dropDownItem.map(ditem=>(
-                                        <li>{ditem.dropItem}</li>
+                                        <li>{ditem.dropItem} test</li>
                                     ))}
                                     </ul>
                                 </>    
