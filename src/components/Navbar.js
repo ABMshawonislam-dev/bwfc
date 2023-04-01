@@ -35,13 +35,13 @@ const Navbar = () => {
             <div className='w-[56%]'>
                 <ul className='flex justify-center gap-x-10 font-man font-normal text-sm '>
                     {navbarData.navItems.map(nitem=>(
-                        <li className='transition ease-in-out delay-150 hover:text-primary'>{nitem.item}
+                        <li className='group relative transition ease-in-out delay-150 hover:text-primary'>{nitem.item}
                            { nitem.dropDown && 
                                 <>
-                                    <FaAngleDown/>
-                                    <ul>
+                                    <FaAngleDown className='absolute top-1 -right-3.5'/>
+                                <ul className='absolute top-full left-0 bg-white shadow-md p-5 min-w-[100px] rounded-lg duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible'>
                                     {nitem.dropDownItem.map(ditem=>(
-                                        <li>{ditem.dropItem} test</li>
+                                        <li>{ditem.dropItem}</li>
                                     ))}
                                     </ul>
                                 </>    
