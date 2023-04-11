@@ -25,7 +25,7 @@ const Banner = () => {
       <section className='h-[500px] bg-no-repeat bg-center' style={{ backgroundImage: `url(${bannerData.bannerbgshape})`    }}>
         <Container>
               <div className='flex'>
-                  <div className='w-1/2 bg-red-500 h-96'></div>
+                  <div className='w-1/2 bg-red-500 h-96' ></div>
                   <div className='w-1/2 bg-green-500 h-96'></div>
               </div>
         </Container>
